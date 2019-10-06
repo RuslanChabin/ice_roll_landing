@@ -4,6 +4,16 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="./css/main.css">
+	<script type="text/javascript" src="js/instafeed.min.js"></script>
+	<script type="text/javascript">
+		var feed = new Instafeed({
+			get: 'user',
+			userId: '3095949657',
+			accessToken: '',
+			template: '<a href="{{link}}"><img src="{{image}}" /></a>'
+		});
+		feed.run();
+	</script>
 	<title>Fruits roll</title>
 </head>
 <body>
@@ -18,13 +28,13 @@
 			<div class="collapse navbar-collapse" id="navbarCollapse">
 			  <ul class="navbar-nav mr-auto">
 				<li class="nav-item">
-				  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+				  <a class="nav-link h4 text-white" href="#">О нас<span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item">
-				  <a class="nav-link" href="#">Link</a>
+				  <a class="nav-link h4 text-white" href="#">Приготовление</a>
 				</li>
 				<li class="nav-item">
-				  <a class="nav-link" href="#">Disabled</a>
+				  <a class="nav-link h4 text-white" href="#">Стоимость</a>
 				</li>
 			  </ul>
 			</div>
@@ -32,7 +42,12 @@
 	</header>
 	<main>
 		<section>
-			
+			<div class="c-about-us-section">
+			</div>
+		</section>
+		<section>
+			<div id="instafeed">
+			</div>
 		</section>
 	</main>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

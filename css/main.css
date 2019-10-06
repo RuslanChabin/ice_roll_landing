@@ -51,6 +51,15 @@ img {
     clip: rect(0 0 0 0);
 }
 
+/*--components--*/
+
 .c-navigation {
-	background-color: rgb(91,211,223);
+	background-color: rgb(91,212,224);
+}
+
+.c-about-us-section {
+	background-image: url(/images/bg_1.JPG);
+	background-size: cover;
+	width: 100vw;
+	height: 100vh;
 }
