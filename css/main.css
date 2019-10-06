@@ -54,12 +54,81 @@ img {
 /*--components--*/
 
 .c-navigation {
-	background-color: rgb(91,212,224);
+	background-color: rgba(33,223,234,0.7);
 }
 
-.c-about-us-section {
+main {
 	background-image: url(/images/bg_1.JPG);
-	background-size: cover;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.c-btn__order {
+	font-size: 24px;
+	border-radius: 25px;
+}
+
+.c-section {
+	position: relative;
 	width: 100vw;
 	height: 100vh;
+}
+
+.c-section--high {
+	height: auto;
+}
+
+.c-section--gradient {
+	background-image: linear-gradient(rgb(255,255,255),rgb(122,185,191));
+}
+
+.c-section--aquatic {
+	background-color: rgb(122,185,191);
+}
+
+.c-intro__block {
+	position: absolute;
+	top: 30vw;
+	margin-right: 13%;
+	margin-left: 13%;
+}
+
+.c-intro__text {
+	background-color: rgba(226,231,232,0.7);
+	border-radius: 25px;
+	padding: 10px;
+}
+
+.c-about__text {
+	background-color: rgba(33,223,234,0.7);
+	border-radius: 25px;
+	padding: 10px;
+	margin-bottom: 100px;
+}
+
+.c-about__text--white {
+	opacity: 0;
+	width: auto;
+	background-color: rgba(236,236,236,0.7);
+	transition: all 1.5s ease;
+}
+
+.c-about__property {
+	opacity: 0;
+	transition: all 1.5s ease;
+}
+
+.c-about__block:hover .c-about__property,
+.c-about__block:hover .c-about__text--white {
+	opacity: 1;
+	background-color: lightgray;
+}
+
+.c-cost__block {
+	width: 75%;
+	height: 90%;
+	border: 5px solid white;
+	margin: auto;
+	margin-top: 5%;
+	border-radius: 35px;
 }

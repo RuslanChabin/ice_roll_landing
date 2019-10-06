@@ -4,52 +4,99 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="./css/main.css">
-	<script type="text/javascript" src="js/instafeed.min.js"></script>
-	<script type="text/javascript">
-		var feed = new Instafeed({
-			get: 'user',
-			userId: '3095949657',
-			accessToken: '6792532565.f21ca6f.03b564cc04fb4ebb9d844f21f40b9695'
-		});
-		feed.run();
-	</script>
 	<title>Fruits roll</title>
 </head>
 <body>
 	<header>
 		<nav class="navbar navbar-expand-md fixed-top c-navigation">
 			<a class="navbar-brand" href="index.html">
-				<img src="./images/logo.png" alt="Logo" class="w-25">
+				<img src="#" alt="Logo" class="w-25">
 			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
 			  <span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarCollapse">
-			  <ul class="navbar-nav mr-auto">
+			  <ul class="navbar-nav mx-auto">
 				<li class="nav-item">
-				  <a class="nav-link h4 text-white" href="#">О нас<span class="sr-only">(current)</span></a>
+				  <a class="nav-link h4 text-white" href="#about_us">О нас<span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item">
-				  <a class="nav-link h4 text-white" href="#">Приготовление</a>
+				  <a class="nav-link h4 text-white" href="#">Фотогалерея</a>
 				</li>
 				<li class="nav-item">
-				  <a class="nav-link h4 text-white" href="#">Стоимость</a>
+				  <a class="nav-link h4 text-white" href="#price_section">Стоимость</a>
 				</li>
 			  </ul>
 			</div>
 		  </nav>
 	</header>
 	<main>
-		<section>
-			<div class="c-about-us-section">
+		<section class="c-section">
+			<div class="c-intro__block">
+				<button class="btn btn-info c-btn__order mb-4">Заказать мороженное</button>
+				<h1 class="c-intro__text h2 text-center">Fruits Roll - натуральное жареное мороженое</h1>
 			</div>
 		</section>
-		<section>
-			<div id="instafeed"></div>
+		<section class="c-section c-section--high  pt-5">
+			<h1 class="hidden" id="about_us">О нас</h1>
+			<div class="c-about__block mt-4 pt-5">
+				<p class="c-about__text h2 text-center w-75 mx-auto text-white">Мы готовим на ваших праздниках натуральное жареное мороженое в виде мини-роллов (аналог тайского мороженого). Радуем необычным способом приготовления и потрясающей подачей.</p>
+				<p class="c-about__text c-about__text--white h2 text-center w-25 mx-auto">Только для Вас:</p>
+				<ul class="d-flex flex-wrap justify-content-center mb-5">
+					<li class="c-about__property col-3 p-3 m-2 rounded-lg text-center">
+						<img src="/images/about_1.JPG" alt="" class="rounded-circle mb-3">
+						<p class="h3">Натуральные продукты</p>
+						<p class="h6">Основа – стакан молока или сливок и небольшое количество свежих фруктов. Без добавления
+						усилителей вкуса и консервантов.</p>
+					</li>
+					<li class="c-about__property col-3 p-3 m-2 rounded-lg text-center">
+						<img src="/images/about_2.JPG" alt="" class="rounded-circle mb-3">
+						<p class="h3">Свежесть</p>
+						<p class="h6">Все ингредиенты натурального мороженого повар-кондитер замешивает при Вас и готовит его прямо у Вас на глазах.</p>
+					</li>
+					<li class="c-about__property col-3 p-3 m-2 rounded-lg text-center">
+						<img src="/images/about_3.JPG" alt="" class="rounded-circle mb-3">
+						<p class="h3">Необычное оформление</p>
+						<p class="h6">Посыпаем десерт различными конфетками и орешками, поливаем топингами, украшаем кондитерскими присыпками.</p>
+					</li>
+				</ul>
+				<p class="h4 mx-auto w-50 text-center mb-5">Удивите гостей необычным десертом, приготовленным по их собственному вкусу</p>
+				<ul class="row justify-content-center list-unstyled">
+					<li class="col-2 p-3 m-2 rounded-lg text-center">
+						<img src="/images/places_1.JPG" alt="" class="rounded-circle mb-3">
+						<p class="h3">Дни рождения</p>
+					</li>
+					<li class="col-2 p-3 m-2 rounded-lg text-center">
+						<img src="/images/places_2.jpg" alt="" class="rounded-circle mb-3">
+						<p class="h3">Свадьбы</p>
+					</li>
+					<li class="col-2 p-3 m-2 rounded-lg text-center">
+						<img src="/images/places_3.jpg" alt="" class="rounded-circle mb-3">
+						<p class="h3">Корпоративы и банкеты</p>
+					</li>
+					<li class="col-2 p-3 m-2 rounded-lg text-center">
+						<img src="/images/places_4.JPG" alt="" class="rounded-circle mb-3">
+						<p class="h3">Промо-мероприятия</p>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section class="c-section c-section--gradient pt-5">
+			<h1 class="hidden" id="price_section"></h1>
+			<div class="c-cost__block">
+			</div>
+		</section>
+		<section class="c-section--aquatic pt-5">
+			<h1 class="text-center mb-5 mx-auto">Фотогалерея</h1>
+			<div class="container">
+				<div id="instafeed" class="row align-items-center"></div>
+			</div>
 		</section>
 	</main>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/instafeed.min.js"></script>
+	<script type="text/javascript" src="/js/common.js"></script>
 </body>
 </html>
