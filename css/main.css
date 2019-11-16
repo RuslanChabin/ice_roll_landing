@@ -1,3 +1,18 @@
+@font-face {
+    font-family: 'TT Firs Neue';
+    src: local('TT Firs Neue Light'), local('TT-Firs-Neue-Light'),
+        url('/fonts/TTFirsNeue-Light/TTFirsNeue-Light.woff2') format('woff2'),
+        url('/fonts/TTFirsNeue-Light/TTFirsNeue-Light.woff') format('woff'),
+        url('/fonts/TTFirsNeue-Light/TTFirsNeue-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
+
+@keyframes appearance {
+	from {left: -1000px}
+	to {left: 0}
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -54,13 +69,100 @@ img {
 /*--components--*/
 
 .c-navigation {
-	background-color: rgba(33,223,234,0.7);
+	background-color: rgba(33,223,234,1);
+	border-radius: 10px;
 }
 
-main {
-	background-image: url(/images/bg_1.JPG);
-	background-repeat: no-repeat;
-	background-size: contain;
+.c-navigation::before {
+	content: "FRUITS_ROLL";
+	width: 10px;
+	font-family: 'TT Firs Neue';
+	font-size: 12px;
+	font-weight: 600;
+	display: block;
+	background-color: white;
+	z-index: 1;
+	position: absolute;
+	left: -13px;
+	padding: 8px;
+	padding-top: 10px;
+	padding-right: 0;
+	transition: all 1s ease;
+	border-radius: 5px;
+	box-shadow: 0 0 5px black;
+}
+
+.c-navigation:hover.c-navigation::before {
+	width: 110px;
+	left: -115px;
+	padding-right: 15px;
+}
+
+.c-logo {
+	position: absolute;
+	top: -14px;
+	left: -17px;
+	display: block;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background-color: white;
+	box-shadow: 0 10px 28px black;
+	z-index: 10;
+}
+
+.c-logo img {
+	margin-top: 20px;
+	margin-left: -5px;
+}
+
+.instaitem {
+	position: relative;
+}
+
+.instaitem::before {
+	display: block;
+	content: "";
+	position: absolute;
+	left: -5%;
+	top: -5%;
+	width: 110%;
+	height: 115%;
+	background-color: white;
+	transform: rotate(15deg);
+	box-shadow: 0 14px 28px black;
+}
+
+.instaitem::after {
+	display: block;
+	content: "";
+	position: absolute;
+	left: -5%;
+	top: -7%;
+	width: 110%;
+	height: 115%;
+	background-color: white;
+	transform: rotate(5deg);
+	box-shadow: 0 14px 28px black;
+}
+
+.instaitem a {
+	position: relative;
+	display: block;
+	background-color: white;
+	width: 110%;
+	height: auto;
+	box-shadow: 0 14px 28px black;
+	z-index: 5;
+}
+
+.instaitem a:hover {
+	opacity: 0.8;
+}
+
+.instaitem img {
+	border: 5px solid white;
+	border-radius: 10px;
 }
 
 .c-btn__order {
@@ -71,11 +173,43 @@ main {
 .c-section {
 	position: relative;
 	width: 100vw;
-	height: 100vh;
+	min-height: 100vh;
 }
 
 .c-section--high {
 	height: auto;
+}
+
+.c-bg {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -100;
+	overflow: hidden;
+}
+
+.c-bg-video {
+	min-height: 700px;
+	min-width: 100%;
+	width: 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.c-bg::after {
+	position: absolute;
+	left: 0;
+	top: -4px;
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-image: url(/images/overlay-transparent-polka-dot-6-transparent.png);
+	background-repeat: repeat;
 }
 
 .c-section--gradient {
@@ -83,27 +217,36 @@ main {
 }
 
 .c-section--aquatic {
-	background-color: rgb(122,185,191);
+	background-image: linear-gradient(rgb(122,185,191),rgb(255,105,180));
+}
+
+.c-section--pink {
+	background-image: linear-gradient(rgb(255,105,180), cyan);
 }
 
 .c-intro__block {
 	position: absolute;
-	top: 30vw;
-	margin-right: 13%;
-	margin-left: 13%;
+	padding: 0;
+	top: 33vw;
+	left: -1000px;
+	width: 550px;
+	height: 200px;
+	border-radius: 0 500em 500em 0;
+	background-color: rgba(255,255,255,1);
+	animation: appearance 2s ease-in-out;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
 }
 
 .c-intro__text {
-	background-color: rgba(226,231,232,0.7);
-	border-radius: 25px;
-	padding: 10px;
+	font-family: 'TT Firs Neue';
+	font-weight: 600;
 }
 
-.c-about__text {
+.c-about__text-block {
 	background-color: rgba(33,223,234,0.7);
 	border-radius: 25px;
-	padding: 10px;
-	margin-bottom: 100px;
+	margin-bottom: 80px;
 }
 
 .c-about__text--white {
@@ -132,3 +275,54 @@ main {
 	margin-top: 5%;
 	border-radius: 35px;
 }
+
+.c-cost__price {
+	width: 100%;
+	min-height: 600px;
+	margin-top: 100px;
+	padding: 50px 0;
+	background-image: url(/images/cost_bg.JPG);
+	background-size: cover;
+}
+
+#button {
+  display: inline-block;
+  background-color: #FF9800;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#button::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+#button:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#button:active {
+  background-color: #555;
+}
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.c-btn__order {
+	margin-left: 130px;
+}
+

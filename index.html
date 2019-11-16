@@ -4,13 +4,15 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="./css/main.css">
+	<script src="https://kit.fontawesome.com/c4c0870934.js" crossorigin="anonymous"></script>
 	<title>Fruits roll</title>
 </head>
 <body>
+	<a id="button"></a>
 	<header>
-		<nav class="navbar navbar-expand-md fixed-top c-navigation">
-			<a class="navbar-brand" href="index.html">
-				<img src="#" alt="Logo" class="w-25">
+		<nav class="navbar navbar-expand-md fixed-top c-navigation mt-3 w-75 mx-auto">
+			<a class="navbar-brand c-logo text-center" href="index.html">
+				<img src="/images/logo_1.svg" alt="Logo" class="w-50">
 			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
 			  <span class="navbar-toggler-icon"></span>
@@ -26,21 +28,41 @@
 				<li class="nav-item">
 				  <a class="nav-link h4 text-white" href="#price_section">Стоимость</a>
 				</li>
+				<li class="nav-item">
+				  <a class="nav-link h4 text-white" href="#order_section">Заказать</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link h4 text-white" href="#">Кейтеринг</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link h4 text-white" href="#">Контакты</a>
+				</li>
 			  </ul>
 			</div>
 		  </nav>
 	</header>
 	<main>
 		<section class="c-section">
+			<div class="c-bg">
+				<video loop muted autoplay class="c-bg-video" id="video">
+					<source src="media/viveobackgraund.mp4" type="video/mp4">>
+				</video>
+			</div>
 			<div class="c-intro__block">
-				<button class="btn btn-info c-btn__order mb-4">Заказать мороженное</button>
-				<h1 class="c-intro__text h2 text-center">Fruits Roll - натуральное жареное мороженое</h1>
+				<h1 class="c-intro__text h2 text-center mt-4">FRUITS_ROLL – натуральное <br>ролл-мороженое в Москве!</h1>
+				<a class="btn btn-info c-btn__order" href="#order_section">Заказать мороженное</a>
 			</div>
 		</section>
 		<section class="c-section c-section--high  pt-5">
 			<h1 class="hidden" id="about_us">О нас</h1>
 			<div class="c-about__block mt-4 pt-5">
-				<p class="c-about__text h2 text-center w-75 mx-auto text-white">Мы готовим на ваших праздниках натуральное жареное мороженое в виде мини-роллов (аналог тайского мороженого). Радуем необычным способом приготовления и потрясающей подачей.</p>
+				<div class="w-75 mx-auto text-white h2 text-center p-5 mt-5 c-about__text-block">
+					<p class="mb-4">Хотите удивить себя и друзей?</p>
+					<p class="mb-4">Попробовать что-то новое?</p>
+					<p class="mb-4">Жареное ролл-мороженое от Кручу Фрукты – это всегда праздник и шоу на Вашем мероприятии</p>
+					<p>Свежие фрукты, сливки и немного волшебства – ваше представление о мороженом никогда не будет прежним!
+</p>
+				</div>
 				<p class="c-about__text c-about__text--white h2 text-center w-25 mx-auto">Только для Вас:</p>
 				<ul class="d-flex flex-wrap justify-content-center mb-5">
 					<li class="c-about__property col-3 p-3 m-2 rounded-lg text-center">
@@ -82,21 +104,86 @@
 			</div>
 		</section>
 		<section class="c-section c-section--gradient pt-5">
-			<h1 class="hidden" id="price_section"></h1>
+			<h1 class="hidden" id="price_section">Стоимость услуг</h1>
 			<div class="c-cost__block">
+				<h2 class="my-5 mx-auto w-25">Предлагаем Вам:</h2>
+			</div>
+			<div class="c-cost__price">
+				<p class="h2 text-center w-75 mx-auto my-5">Стоимость уникального шоу с приготовлением жареного мороженого на Вашем празднике</p>
+				<p class="h1 text-center w-75 mx-auto my-5">От ... рублей!</p>
+				<div class="row justify-content-center">
+					<button class="btn btn-light mr-5">... рублей</button>
+					<button class="btn btn-light">... рублей</button>
+				</div>
 			</div>
 		</section>
-		<section class="c-section--aquatic pt-5">
+		<section class="c-section--aquatic py-5">
 			<h1 class="text-center mb-5 mx-auto">Фотогалерея</h1>
-			<div class="container">
-				<div id="instafeed" class="row align-items-center"></div>
+			<div class="container mb-5">
+				<div id="instafeed" class="row justify-content-center align-items-center"></div>
+			</div>
+		</section>
+		<section class="c-section c-section--pink py-5">
+			<h1 class="hidden" id="order_section">Заказать</h1>
+			<div class="c-order__block w-75 mx-auto py-5">
+				<h1 class="text-center mb-5">Заказать жареное мороженое</h1>
+				<p class="h3 text-center mb-5">Оставьте свои координаты и мы свяжемся с Вами!</p>
+				<form class="my-5" action="" method="post">
+					<div class="row justify-content-center">
+						<div class="col-4">
+							<input type="text" class="form-control" name="name" placeholder="Ваше имя">
+						</div>
+						<div class="col-4">
+							<input type="text" class="form-control" name="phone" placeholder="Ваш номер">
+						</div>
+						<div class="col-2">
+							<button class="btn btn-info">Позвоните мне!</button>
+						</div>
+					</div>
+				</form>
+				<p class="h3 text-center">Или позвоните нам сами по телефону: +7 (916) 792 66 68 </p>
 			</div>
 		</section>
 	</main>
+	<footer class="py-5">
+		<ul class="row justify-content-center list-unstyled">
+			<li class="col-2">
+				<h3 class="text-center h4">Сделать заказ</h3>
+				<div class="col-12 justify-content-center">
+					<button class="btn btn-primary">Заказать</button>
+				</div>
+			</li>
+			<li class="col-2 border-right border-left">
+				<h3 class="text-center h4">Адрес</h3>
+				<p class="h6 text-center">Москва, Лиственничная аллея, 2А</p>
+			</li>
+			<li class="col-2">
+				<h3 class="h4 text-center">Мы в социальных сетях</h3>
+				<ul class="row list-unstyled justify-content-center">
+					<li class="mr-2">
+						<a href="#">
+							<i class="fab fa-instagram h1"></i>
+						</a>
+					</li>
+					<li class="mr-2">
+						<a href="#">
+							<i class="fab fa-vk h1"></i>
+						</a>
+					</li>
+					<li class="mr-2">
+						<a href="#">
+							<i class="fab fa-facebook-square h1"></i>
+						</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</footer>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="js/instafeed.min.js"></script>
 	<script type="text/javascript" src="/js/common.js"></script>
+	<script src="https://snipp.ru/cdn/jquery/2.1.1/jquery.min.js"></script>
 </body>
 </html>
