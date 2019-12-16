@@ -18,10 +18,14 @@
 	padding: 0;
 }
 
+html{
+	overflow-x: hidden;
+}
+
 body {
 	position: relative;
-	width: 100%;
-	height: 100%;
+	width: 100vw;
+	height: auto;
 	
 	background-color: white;
 	overflow-x: hidden;
@@ -73,96 +77,83 @@ img {
 	border-radius: 10px;
 }
 
-.c-navigation::before {
+.c-logo {
+	position: absolute;
+	top: -14px;
+	left: -17px;
+	width: 100px;
+	height: 100px;
+}
+
+.c-logo:hover {
+	color: hotpink;
+	text-shadow: 0 0 5px hotpink;
+	
+}
+
+.c-logo::before {
 	content: "FRUITS_ROLL";
 	width: 10px;
 	font-family: 'TT Firs Neue';
 	font-size: 12px;
-	font-weight: 600;
+	font-weight: 700;
 	display: block;
 	background-color: white;
-	z-index: 1;
 	position: absolute;
-	left: -13px;
+	top: 30px;
+	left: 7px;
 	padding: 8px;
 	padding-top: 10px;
 	padding-right: 0;
 	transition: all 1s ease;
 	border-radius: 5px;
 	box-shadow: 0 0 5px black;
+	z-index: 2;
 }
 
-.c-navigation:hover.c-navigation::before {
+.c-navigation:hover .c-logo::before {
 	width: 110px;
-	left: -115px;
+	left: -100px;
 	padding-right: 15px;
 }
 
-.c-logo {
+.c-logo p {
 	position: absolute;
-	top: -14px;
-	left: -17px;
-	display: block;
-	width: 100px;
-	height: 100px;
-	border-radius: 50%;
+	top: 0;
+	left: 0;
 	background-color: white;
-	box-shadow: 0 10px 28px black;
+	width: 100%;
+	height: 100%;
 	z-index: 10;
+	border-radius: 50%;
+	box-shadow: 0 10px 20px 5px black;
 }
 
 .c-logo img {
-	margin-top: 20px;
-	margin-left: -5px;
+	height: 75px;
+	width: 75px;
+	margin-top: 10px;
 }
 
 .instaitem {
 	position: relative;
 }
 
-.instaitem::before {
-	display: block;
-	content: "";
-	position: absolute;
-	left: -5%;
-	top: -5%;
-	width: 110%;
-	height: 115%;
-	background-color: white;
-	transform: rotate(15deg);
-	box-shadow: 0 14px 28px black;
-}
-
-.instaitem::after {
-	display: block;
-	content: "";
-	position: absolute;
-	left: -5%;
-	top: -7%;
-	width: 110%;
-	height: 115%;
-	background-color: white;
-	transform: rotate(5deg);
-	box-shadow: 0 14px 28px black;
-}
-
 .instaitem a {
 	position: relative;
 	display: block;
-	background-color: white;
-	width: 110%;
-	height: auto;
+	width: 300px;
+	height: 300px;
+	margin: 10px;
 	box-shadow: 0 14px 28px black;
-	z-index: 5;
+	border-radius: 10px;
+	border: 5px solid white;
+	background-color: white;
+	overflow: hidden;
 }
 
 .instaitem a:hover {
 	opacity: 0.8;
-}
-
-.instaitem img {
-	border: 5px solid white;
-	border-radius: 10px;
 }
 
 .c-btn__order {
@@ -171,36 +162,34 @@ img {
 }
 
 main {
-	background-image: linear-gradient(rgb(255,255,255) 15%,rgb(122,185,191),rgb(122,185,191),rgb(255,105,180),rgb(255,105,180), cyan)
+	width: 100vw;
+	margin: 0;
+	padding: 0;
+	background-image: linear-gradient(rgb(255,255,255) 10%,rgb(122,185,191),rgb(122,185,191),rgb(255,105,180),rgb(255,105,180), cyan)
 }
 
 .c-section {
 	position: relative;
-	width: 100vw;
-	min-height: 100vh;
+	width: 100%;
+	height: auto;
 }
 
-.c-section--high {
-	height: auto;
+.c-section-high {
+	height: 100vh;
 }
 
 .c-bg {
 	position: absolute;
 	top: 0px;
 	left: 0px;
-	min-width: 100%;
-	min-height: 100%;
-	width: auto;
-	height: auto;
+	min-width: 100vw;
+	height: 100vh;
 	overflow: hidden;
 }
 
 .c-bg-video {
-	min-height: 700px;
-	min-width: 100%;
-	width: 100%;
-	background-position: center center;
-	background-repeat: no-repeat;
+	width: 100vw;
+	height: auto;
 }
 
 .c-bg::after {
@@ -210,17 +199,18 @@ main {
 	content: "";
 	display: block;
 	width: 100%;
-	height: 100%;
-	background-image: url(/images/overlay-transparent-polka-dot-6-transparent.png);
+	height: 101%;
+	background-image: url(../images/overlay-transparent-polka-dot-6-transparent.png);
 	background-repeat: repeat;
 }
 
 .c-intro__block {
 	position: absolute;
-	padding: 0;
-	top: 33vw;
+	padding: 20px;
+	padding-left: 6px;
+	bottom: 50px;
 	left: -1000px;
-	width: 550px;
+	min-width: 320px;
 	height: 200px;
 	border-radius: 0 500em 500em 0;
 	background-color: rgba(255,255,255,1);
@@ -246,7 +236,7 @@ main {
 }
 
 .c-about__property {
-	background-color: lightgray;
+	background-color: white;
 }
 
 .c-cost__block {
@@ -264,29 +254,6 @@ main {
 	margin-top: 100px;
 	padding: 50px 0;
 	background-size: cover;
-}
-
-.c-places {
-	position: relative;
-	z-index: 1;
-}
-
-.c-places::after {
-	position: absolute;
-	top: 160px;
-	left: 23px;
-	content: "";
-	display: block;
-	width: 100%;
-	height: 250px;
-	background-image: url(/images/bg_cup.png);
-	background-size: contain;
-	background-repeat: no-repeat;
-	z-index: -1;
-}
-
-.c-make__text {
-	margin-top: 200px;
 }
 
 #button {
@@ -331,24 +298,17 @@ main {
 }
 
 .c-photo-slider {
-	position:relative;
-	width:100%;
-	height: 43vw;
+	position: relative;
+	width: 100vw;
+	height: auto;
 	padding-bottom: 20px;
-}
-
-.slider-arrow--left{
-	position: absolute;
-	top: 270px;
-	left: 4%;
-	z-index: 200;
 }
 
 .small-buttons-container{
 	display: flex;
 	position: absolute;
 	z-index: 1000;
-	bottom: -25%;
+	bottom: -15%;
 	left: 45%;
 }
 
@@ -366,18 +326,11 @@ main {
 		background-color: hotpink;
 	}
 
-.slider-arrow--right{
-	position: absolute;
-	top: 270px;
-	left: 89%;
-	z-index: 200;
-}
-
 .photo-slider-list{
 	position: relative;
 	display: flex;
-	width: 100%;
-	height: 90%;
+	width: 100vw;
+	min-height: 600px;
 }
 
 .photo-slider-list div{
@@ -433,8 +386,9 @@ main {
 	position: absolute;
 	display: block;
 	color: black;
+	width: 100%;
 	font-size: 20px;
-	bottom: -80px;
+	top: 95%;
 	padding: 5px 15px;
 	opacity: 0;
 	background-color: transparent;
@@ -448,13 +402,14 @@ main {
 }
 
 .arrow-button{
-	position: relative;
+	position: absolute;
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
 	background-color: white;
 	box-shadow: 0 0 20px 10px cyan;
 	border: none;
+	z-index: 100;
 }
 
 .arrow-button:hover{
@@ -494,4 +449,54 @@ main {
 .arrow-button--right:hover:after{
 			border-bottom: 4px solid white;
 			border-right: 4px solid white;
-	}	
+	}
+
+.slider-arrow--left{
+	top: 50%;
+	left: 1%;
+}
+
+.slider-arrow--right{
+	top: 50%;
+	right: 1%;
+}
+
+@media screen and (max-width: 1050px) {
+	.c-bg-video {
+		margin-top: 30%;
+	}
+	
+	.photo-slider-list {
+		min-height: 400px
+	}
+	
+	.small-buttons-container {
+		bottom: -20%;
+		left: 42%
+	}
+	
+	.photo-slider__text {
+		top: 95%;
+		left: -50%;
+		width: 200%;
+		font-size: 16px;
+		text-align: center;
+		border-radius: 5px
+	}
+	
+	.instaitem a {
+		width: 200px;
+		height: 200px;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.photo-slider-list {
+		min-height: 250px;
+	}
+	
+	.small-buttons-container {
+		left: 39%;
+		bottom: -25%;
+	}
+}

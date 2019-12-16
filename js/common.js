@@ -5,7 +5,7 @@ $(document).ready(function(){
 	  userId: '3095949657',
 	  limit: '12',
 	  resolution: 'standard_resolution',
-	  template: '<div class="instaitem col-3 m-4 mb-5"><a href="{{image}}" title="{{caption}} target="_blank"><img src="{{image}}" alt="{{caption}}" class="img-fluid"/></a></div>',
+	  template: '<div class="instaitem"><a href="{{image}}" title="{{caption}} target="_blank"><img src="{{image}}" alt="{{caption}}" class="img-fluid"/></a></div>',
 	  accessToken: '3095949657.1677ed0.745c759d24894ab782c120c3bd1367a9'
 	});
 	
@@ -36,10 +36,9 @@ $(document).ready(function(){
 	});
 });
 
-//video
+//video var player = document.getElementById("video");player.playbackRate = 0.8;
 
-var player = document.getElementById("video");
-player.playbackRate = 0.8;
+
 
 //carusel
 

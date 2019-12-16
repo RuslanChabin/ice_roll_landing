@@ -8,16 +8,19 @@
 	<title>Fruits roll</title>
 </head>
 <body>
-	<a id="button"></a>
+	<a href="#" id="button"></a>
 	<header>
-		<nav class="navbar navbar-expand-md fixed-top c-navigation mt-3 w-75 mx-auto">
+		<nav class="navbar navbar-expand-lg fixed-top c-navigation mt-3 w-75 mx-auto">
 			<a class="navbar-brand c-logo text-center" href="index.html">
-				<img src="/images/logo_1.svg" alt="Logo" class="w-50">
+				<p>
+					<img src="./images/logo_1.svg" alt="Logo">
+				</p>
 			</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-			  <span class="navbar-toggler-icon"></span>
+			<button class="navbar-toggler text-white ml-auto" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+		  	  <span class="mr-5">FRUITS_ROLL</span>
+			  <i class="fas fa-bars ml-auto"></i>
 			</button>
-			<div class="collapse navbar-collapse" id="navbarCollapse">
+			<div class="collapse navbar-collapse text-center" id="navbarCollapse">
 			  <ul class="navbar-nav mx-auto">
 				<li class="nav-item">
 				  <a class="nav-link h4 text-white" href="#about_us">О нас<span class="sr-only">(current)</span></a>
@@ -42,10 +45,10 @@
 		  </nav>
 	</header>
 	<main>
-		<section class="c-section">
+		<section class="c-section c-section-high mb-5">
 			<div class="c-bg">
 				<video loop muted autoplay class="c-bg-video" id="video">
-					<source src="media/viveobackgraund.mp4" type="video/mp4">>
+					<source src="./media/viveobackgraund.mp4" type="video/mp4">>
 				</video>
 			</div>
 			<div class="c-intro__block">
@@ -53,53 +56,49 @@
 				<a class="btn btn-info c-btn__order" href="#order_section">Заказать мороженное</a>
 			</div>
 		</section>
-		<section class="c-section c-section--high  pt-5">
-			<h1 class="hidden" id="about_us">О нас</h1>
-			<div class="c-about__block mt-4 pt-5">
-				<div class="w-75 mx-auto text-white h2 text-center p-5 my-5 c-about__text-block">
+		<section class="c-section c-section--high" id="about_us">
+			<h1 class="hidden">О нас</h1>
+			<div class="c-about__block mt-5 pt-5">
+				<div class="mx-5 text-white h2 text-center p-5 my-5 c-about__text-block">
 					<p class="mb-4">Жареное ролл-мороженое от Кручу Фрукты – это всегда праздник и шоу на Вашем мероприятии</p>
 					<p>Свежие фрукты, сливки и немного волшебства – ваше представление о мороженом никогда не будет прежним!</p>
 				</div>
-				<p class="c-about__text c-about__text--white rounded-lg h2 text-center w-25 mb-5 mx-auto">Почему именно мы?</p>
-				<ul class="d-flex flex-wrap justify-content-center mb-5 list-unstyled">
-					<li class="c-about__property col-3 p-3 mx-2 rounded-lg text-center">
-						<img src="/images/about_1.JPG" alt="" class="rounded-circle mb-3">
+				<p class="c-about__text c-about__text--white rounded-lg h2 text-center col-12 p-5 mb-5 mx-auto bg-transparent">Почему именно мы?</p>
+				<ul class="d-flex flex-wrap w-100 justify-content-center mb-5 list-unstyled">
+					<li class="c-about__property col-9 col-md-3 p-3 mx-2 mb-2 rounded-lg text-center">
+						<img src="./images/about_1.JPG" alt="" class="rounded-circle mb-3">
 						<p class="h3">Свежие продукты</p>
 						<p class="h6">Молоко, сливки и любимые фрукты и ягоды – главные составляющие ролл-мороженого. Мы тщательно отбираем все ингредиенты, чтобы гарантировать лучший вкус.</p>
 					</li>
-					<li class="c-about__property col-3 p-3 mx-2 rounded-lg text-center">
-						<img src="/images/about_2.JPG" alt="" class="rounded-circle mb-3">
+					<li class="c-about__property col-9 col-md-3 p-3 mx-2 mb-2 rounded-lg text-center">
+						<img src="./images/about_2.JPG" alt="" class="rounded-circle mb-3">
 						<p class="h3">Лучшее оборудование</p>
 						<p class="h6">Профессиональный фризер от лидеров индустрии позволяет создавать настоящее мороженое, равномерно замораживая его по всей поверхности. Никаких кристалликов льда!</p>
 					</li>
-					<li class="c-about__property col-3 p-3 mx-2 rounded-lg text-center">
-						<img src="/images/about_3.JPG" alt="" class="rounded-circle mb-3">
+					<li class="c-about__property col-9 col-md-3 p-3 mx-2 mb-2 rounded-lg text-center">
+						<img src="./images/about_3.JPG" alt="" class="rounded-circle mb-3">
 						<p class="h3">Мобильность</p>
 						<p class="h6">Мы всегда готовы приступить к работе в день заказа и выехать в любую точку мира.</p>
 					</li>
 				</ul>
-				<h2 class="h4 mx-auto w-50 text-center mb-5">Жареное мороженое украсит любое мероприятие!</h2>
+				<h2 class="h4 mx-auto w-50 text-center py-5 mb-5">Жареное мороженое украсит любое мероприятие!</h2>
 				<ul class="row justify-content-center list-unstyled">
-					<li class="col-2 p-3 m-2 rounded-lg text-center c-places">
-						<img src="/images/places_1.JPG" alt="" class="rounded-circle mb-3">
-						<p class="h4">День<br> рождения</p>
+					<li class="col-11 col-md-3 m-2 rounded-lg text-center c-places d-flex d-md-block justify-content-center">
+						<img src="./images/places_1.JPG" alt="" class="rounded-circle mb-3 col-6 col-md-12 mr-2 mr-lg-0 p-0">
+						<p class="h4 py-3 bg-white rounded-lg align-self-center px-2">День рождения</p>
 					</li>
-					<li class="col-2 p-3 m-2 rounded-lg text-center c-places">
-						<img src="/images/places_2.jpg" alt="" class="rounded-circle mb-3">
-						<p class="h4">Свадьба</p>
+					<li class="col-11 col-md-3 m-2 rounded-lg text-center c-places d-flex d-md-block justify-content-center">
+						<img src="./images/places_2.jpg" alt="" class="rounded-circle mb-3 col-6 col-md-12 p-0 order-2">
+						<p class="h4 py-3 bg-white rounded-lg align-self-center px-2 order-1 mr-2 mr-lg-0">Новогодние корпоративы</p>
 					</li>
-					<li class="col-2 p-3 m-2 rounded-lg text-center c-places">
-						<img src="/images/places_3.jpg" alt="" class="rounded-circle mb-3">
-						<p class="h4">Корпоратив</p>
-					</li>
-					<li class="col-2 p-3 m-2 rounded-lg text-center c-places">
-						<img src="/images/places_4.JPG" alt="" class="rounded-circle mb-3">
-						<p class="h4">Фестиваль</p>
+					<li class="col-11 col-md-3 m-2 rounded-lg text-center c-places d-flex d-md-block justify-content-center">
+						<img src="./images/places_3.jpg" alt="" class="rounded-circle mb-3 col-6 col-md-12 mr-2 mr-lg-0 p-0">
+						<p class="h4 py-3 bg-white rounded-lg align-self-center px-2">Детский праздник</p>
 					</li>
 				</ul>
 			</div>
-			<div class="mx-auto my-5 c-photo-slider">
-				<p class="d-block h2 mx-auto w-50 text-center c-make__text">Как готовится жареное мороженое?</p>
+			<div class="col-12 my-5 p-0 c-photo-slider">
+				<p class="d-block h2 mx-auto w-50 mb-5 text-center">Как готовится жареное мороженое?</p>
 				<h2 class="hidden">Photo slider</h2>
 				<div class="small-buttons-container">
 					<button class="slider-button slider-button-1 slider-button--active"></button>
@@ -110,7 +109,7 @@
 				</div>
 				<button class="arrow-button arrow-button--left slider-arrow--left"></button>
 				<button class="arrow-button arrow-button--right slider-arrow--right"></button>
-				<div class="photo-slider-list d-flex justify-content-center">
+				<div class="photo-slider-list d-flex justify-content-center mb-5">
 					<div class="prevLeftSecond">
 						<img class="photo-slider__img" src="images/slider_4.JPG" alt="#"><p class="photo-slider__text rounded-bottom">Скручиваем свежее мороженое в роллы</p></div>
 					<div class="prev">
@@ -124,39 +123,37 @@
 				</div>
 			</div>
 		</section>
-		<section class="c-section pt-4">
+		<section class="c-section my-5 pt-5">
 			<h1 class="hidden" id="price_section">Стоимость услуг</h1>
-			<div class="p-5 py-1 c-cost__block">
+			<div class="p-5 py-1 c-cost__block bg-white">
 				<h2 class="my-3 mx-auto w-75 text-center h1">Предлагаем Вам:</h2>
 				<p class="h3 my-5 text-center">4 вида начинок, безлимитные топпинги и посыпки, 1 час работы, 20 порций</p>
 				<p class="h2 text-center w-75 mx-auto my-5">Стоимость уникального шоу с приготовлением жареного мороженого на Вашем празднике</p>
 				<p class="h1 text-center w-75 mx-auto my-5">От 8000 рублей!</p>
 				<div class="row justify-content-center">
-					<button class="btn btn-light mr-5">... рублей</button>
-					<button class="btn btn-light">... рублей</button>
+					<a class="btn btn-lg btn-primary mx-auto" href="#order_section">Узнать подробности</a>
 				</div>
 			</div>
 		</section>
-		<section class="c-section--aquatic my-5 py-5" id="gallery">
+		<section class="c-section--aquatic mb-5 py-5" id="gallery">
 			<h1 class="text-center my-5 mx-auto">Фотогалерея</h1>
-			<div class="container mb-5">
-				<div id="instafeed" class="row justify-content-center align-items-center"></div>
+			<div class="container mb-5 p-0">
+				<div id="instafeed" class="d-flex flex-wrap p-0 justify-content-center align-items-center"></div>
 			</div>
 		</section>
-		<section class="c-section pt-5" id="order_section">
-			<h1 class="hidden">Заказать</h1>
-			<div class="c-order__block w-75 mx-auto py-5">
+		<section class="c-section" id="order_section">
+			<div class="c-order__block w-75 mx-auto">
 				<h1 class="text-center mb-5">Заказать жареное мороженое</h1>
 				<p class="h3 text-center mb-5">Оставьте свои координаты и мы свяжемся с Вами!</p>
 				<form class="my-5" action="" method="post">
 					<div class="row justify-content-center">
-						<div class="col-4">
+						<div class="col-12 col-md-4 mb-2">
 							<input type="text" class="form-control" name="name" placeholder="Ваше имя">
 						</div>
-						<div class="col-4">
+						<div class="col-12 col-md-4 mb-2">
 							<input type="text" class="form-control" name="phone" placeholder="Ваш номер">
 						</div>
-						<div class="col-2">
+						<div class="col-6 col-md-2">
 							<button class="btn btn-info">Позвоните мне!</button>
 						</div>
 					</div>
@@ -167,17 +164,19 @@
 	</main>
 	<footer class="py-5" id="contacts">
 		<ul class="row justify-content-center list-unstyled">
-			<li class="col-2">
+			<li class="col-12 col-md-2">
 				<h3 class="text-center h4">Сделать заказ</h3>
 				<div class="col-12 justify-content-center">
-					<a class="btn btn-primary col-12" href="#order_section">Заказать</a>
+					<a class="btn btn-primary col-6 mx-auto d-block" href="#order_section">Заказать</a>
 				</div>
+				<div class="d-block d-md-none w-100 border my-3"></div>
 			</li>
-			<li class="col-2 border-right border-left">
+			<li class="col-12 col-md-2 border-right border-left">
 				<h3 class="text-center h4">Адрес</h3>
 				<p class="h6 text-center">Москва, Лиственничная аллея, 2А</p>
+				<div class="d-block d-md-none w-100 border my-3"></div>
 			</li>
-			<li class="col-2">
+			<li class="col-12 col-md-2">
 				<h3 class="h4 text-center">Мы в социальных сетях</h3>
 				<ul class="row list-unstyled justify-content-center">
 					<li class="mr-2">
