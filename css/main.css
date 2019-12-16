@@ -1,9 +1,9 @@
 @font-face {
     font-family: 'TT Firs Neue';
     src: local('TT Firs Neue Light'), local('TT-Firs-Neue-Light'),
-        url('/fonts/TTFirsNeue-Light/TTFirsNeue-Light.woff2') format('woff2'),
-        url('/fonts/TTFirsNeue-Light/TTFirsNeue-Light.woff') format('woff'),
-        url('/fonts/TTFirsNeue-Light/TTFirsNeue-Light.ttf') format('truetype');
+        url('../fonts/TTFirsNeue-Light/TTFirsNeue-Light.woff2') format('woff2'),
+        url('../fonts/TTFirsNeue-Light/TTFirsNeue-Light.woff') format('woff'),
+        url('../fonts/TTFirsNeue-Light/TTFirsNeue-Light.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
   }
