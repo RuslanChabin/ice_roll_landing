@@ -328,7 +328,7 @@ main {
 .photo-slider-list{
 	position: relative;
 	display: flex;
-	width: 100vw;
+	width: 100%;
 	min-height: 600px;
 }
 
@@ -408,7 +408,7 @@ main {
 	background-color: white;
 	box-shadow: 0 0 20px 10px cyan;
 	border: none;
-	z-index: 100;
+	z-index: 200;
 }
 
 .arrow-button:hover{
@@ -466,7 +466,7 @@ main {
 	}
 	
 	.photo-slider-list {
-		min-height: 400px
+		height: 400px
 	}
 	
 	.small-buttons-container {
@@ -491,7 +491,7 @@ main {
 
 @media screen and (max-width: 650px) {
 	.photo-slider-list {
-		min-height: 250px;
+		height: 250px;
 	}
 	
 	.small-buttons-container {
