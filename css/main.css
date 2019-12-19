@@ -48,18 +48,6 @@ img {
     border: 0;
 }
 
-.ripple{
-	position: absolute;
-	width: 50px;
-	height: 50px;
-	border-radius: 50%;
-	background-color: white;
-	z-index: 5000;
-	opacity: 0.3;
-	transform: scale(0);
-	transition: transform 0.2s ease;
-}
-
 .hidden {
     position: absolute;
   
@@ -183,7 +171,7 @@ main {
 	top: 0px;
 	left: 0px;
 	min-width: 100vw;
-	height: 100vh;
+	height: 100%;
 	overflow: hidden;
 }
 
@@ -239,11 +227,7 @@ main {
 }
 
 .c-cost__block {
-	width: 75%;
-	height: 90%;
 	border: 5px solid white;
-	margin: auto;
-	margin-top: 8%;
 	border-radius: 35px;
 }
 
@@ -460,9 +444,29 @@ main {
 	right: 1%;
 }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1240px) {
+	.c-navigation {
+		width: 90% !important;
+		padding-left: 5%;
+	}
+}
+
+@media screen and (max-width: 1030px) {
+	
+	.c-logo::before {
+		display: none;
+	}
+	
+	.c-section-high {
+		height: 100vw;
+	}
+	
 	.c-bg-video {
-		margin-top: 30%;
+		margin-top: 12%;
+	}
+	
+	.c-intro__block {
+		bottom: 60px;
 	}
 	
 	.photo-slider-list {
@@ -489,6 +493,16 @@ main {
 	}
 }
 
+@media screen and (max-width: 770px) {
+	.c-bg-video {
+		margin-top: 15%;
+	}
+	
+	.c-intro__block {
+		bottom: 10px;
+	}
+}
+
 @media screen and (max-width: 650px) {
 	.photo-slider-list {
 		height: 250px;
@@ -497,5 +511,63 @@ main {
 	.small-buttons-container {
 		left: 39%;
 		bottom: -25%;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	.c-submenu-btn {
+		padding-left: 15%
+	}
+	
+	.c-section {
+		margin-bottom: 20px !important;
+	}
+	
+	.c-bg-video {
+		margin-top: 0%;
+	}
+	
+	.c-intro__block {
+		bottom: 0;
+		width: 100%;
+		height: auto;
+		padding: 0;
+		border-radius: 0; 
+	}
+	
+	.c-btn__order {
+		width: 90%;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.c-about__block {
+		margin-top: 20px !important;
+		margin-bottom: 20px !important;
+	}
+	
+	.c-about__text-block {
+		font-size: 24px;
+	}
+	
+	.instaitem a {
+		width: 150px;
+		height: 150px;
+	}
+}
+
+@media screen and (max-width: 380px) {
+	.c-submenu-btn {
+		text-align: right;
+	}
+	
+	.small-buttons-container {
+		left: 31%;
+	}
+	
+	.instaitem a {
+		width: 100px;
+		height: 100px;
 	}
 }
